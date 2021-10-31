@@ -5,7 +5,8 @@ import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/AboutUs';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
+import NotFound from './components/NotFound/NotFound';
+import UseService from './components/UseService/UseService';
 function App() {
   return (
     <div>
@@ -13,11 +14,20 @@ function App() {
         <Router>
           <Header></Header>
         <Switch>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
           <Route path="/about">
             <AboutUs></AboutUs>
           </Route>
-          <Route path="/home">
+          <Route exact path="/">
             <Home></Home>
+          </Route>
+          <Route path="/use">
+            <UseService></UseService>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>
