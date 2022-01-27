@@ -1,13 +1,18 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
+import './Service.css';
 
-
-const Service = () => {
-    // const {id, first_name, email, ip_address, service, price, img} = props.services;
+const Service = ({service}) => {
+    const { name, price, img } = service;
 
     return (
-        <div>
-            {/* <h3>Company: {service.length}</h3> */}
-        </div>
+        <Card className="mb-5 bg-dark text-black">
+  <Card.Img className="card" src={img} alt="Card image" />
+  <Card.ImgOverlay className="card-title">
+    <Card.Title>{name}</Card.Title>
+    <Card.Text>{price}</Card.Text>
+  </Card.ImgOverlay>
+</Card>
     );
 };
 

@@ -6,7 +6,8 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
-import UseService from './components/UseService/UseService';
+import MoreServices from './components/MoreServices/MoreServices';
+import Learners from './components/Learners/Learners';
 function App() {
   return (
     <div>
@@ -23,8 +24,11 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/use">
-            <UseService></UseService>
+          <Route path="/services">
+            <MoreServices></MoreServices>
+          </Route>
+          <Route path="/learner">
+            <Learners></Learners>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
